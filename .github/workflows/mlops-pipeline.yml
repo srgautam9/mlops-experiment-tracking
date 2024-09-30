@@ -1,5 +1,6 @@
 name: MLOps Pipeline CI
 
+# Trigger the workflow on every push or pull request to the 'main' branch
 on:
   push:
     branches:
@@ -8,29 +9,35 @@ on:
     branches:
       - main
 
+# Define the jobs to be run
 jobs:
   build:
+    # Runs on the latest Ubuntu environment in GitHub-hosted runners
     runs-on: ubuntu-latest
 
     steps:
+    # Check out the code from the GitHub repository
     - name: Checkout code
       uses: actions/checkout@v2
 
+    # Set up Python 3.9
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
-        python-version: '3.9'
+        python-version: '3.9'  # Corrected syntax: colon after `with`
 
+    # Install dependencies from the requirements.txt file
     - name: Install dependencies
-      run:
+      run: |
         pip install --upgrade pip
         pip install -r requirements.txt
 
-   - name: Run training script
-      run:
+    # Run the training script or the tests
+    - name: Run training script
+      run: |
         python train.py
 
-   - name: Run tests
-      run:
+    # Optionally, run unit tests or other verification steps
+    - name: Run tests
+      run: |
         pytest
-
