@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: mlops-lab-image
 
     steps:
     - name: Checkout code
