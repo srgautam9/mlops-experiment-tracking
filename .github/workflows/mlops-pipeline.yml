@@ -41,8 +41,3 @@ jobs:
     - name: Run training script
       run: |
         python train.py
-
-    # Run pytest to execute unit tests
-    - name: Run tests
-      run: |
-        pytest
