@@ -24,7 +24,7 @@ jobs:
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
-        python-version: '3.9'  # Corrected syntax: colon after `with`
+        python-version: '3.9'
 
     # Install dependencies from the requirements.txt file
     - name: Install dependencies
@@ -32,12 +32,17 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
 
+    # Install pytest separately (optional if not added to requirements.txt)
+    - name: Install pytest
+      run: |
+        pip install pytest
+
     # Run the training script or the tests
     - name: Run training script
       run: |
         python train.py
 
-    # Optionally, run unit tests or other verification steps
+    # Run pytest to execute unit tests
     - name: Run tests
       run: |
         pytest
