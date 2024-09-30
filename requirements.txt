@@ -3,3 +3,4 @@ pandas==1.4.3
 numpy==1.21.2
 joblib==1.0.1
 mlflow
+pytest
