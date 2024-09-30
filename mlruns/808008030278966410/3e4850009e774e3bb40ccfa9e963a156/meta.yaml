@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gautam8/Assignment_mlops/mlops-experiment-tracking/mlruns/808008030278966410/3e4850009e774e3bb40ccfa9e963a156/artifacts
+end_time: 1727676838996
+entry_point_name: ''
+experiment_id: '808008030278966410'
+lifecycle_stage: active
+run_id: 3e4850009e774e3bb40ccfa9e963a156
+run_name: painted-penguin-205
+run_uuid: 3e4850009e774e3bb40ccfa9e963a156
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727676834749
+status: 3
+tags: []
+user_id: gautam8
